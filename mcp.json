@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "esignatures": {
+      "type": "streamable-http",
+      "url": "https://esignatures.com/mcp"
+    }
+  }
+}

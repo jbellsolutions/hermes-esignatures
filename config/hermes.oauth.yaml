@@ -1,0 +1,30 @@
+# Manual configuration for Hermes versions or deployments that do not use
+# Portable Agent Plugins. The plugin's mcp.json already supplies this server.
+mcp_servers:
+  esignatures:
+    url: "https://esignatures.com/mcp"
+    auth: oauth
+    enabled: true
+    timeout: 120
+    trust: untrusted
+    tools:
+      include:
+        - create_contract
+        - query_contract
+        - send_draft_contract
+        - list_recent_contracts
+        - add_contract_signer
+        - update_contract_signer
+        - resend_contract_signer_request
+        - query_contract_placeholder_fields
+        - update_contract_placeholder_fields
+        - query_contract_content
+        - update_contract_content
+        - create_template
+        - update_template
+        - update_template_content
+        - query_template
+        - query_template_content
+        - list_templates
+    resources: false
+    prompts: false

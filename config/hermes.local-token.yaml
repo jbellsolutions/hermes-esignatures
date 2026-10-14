@@ -1,0 +1,34 @@
+# Optional fallback for a headless or unattended Hermes deployment.
+# Put ESIGNATURES_SECRET_TOKEN in the active Hermes profile .env; never put
+# the token in this file or source control.
+mcp_servers:
+  esignatures:
+    command: uvx
+    args:
+      - mcp-server-esignatures
+    env:
+      ESIGNATURES_SECRET_TOKEN: "${ESIGNATURES_SECRET_TOKEN}"
+    enabled: true
+    timeout: 120
+    trust: untrusted
+    tools:
+      include:
+        - create_contract
+        - query_contract
+        - send_draft_contract
+        - list_recent_contracts
+        - add_contract_signer
+        - update_contract_signer
+        - resend_contract_signer_request
+        - query_contract_placeholder_fields
+        - update_contract_placeholder_fields
+        - query_contract_content
+        - update_contract_content
+        - create_template
+        - update_template
+        - update_template_content
+        - query_template
+        - query_template_content
+        - list_templates
+    resources: false
+    prompts: false

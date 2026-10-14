@@ -1,0 +1,29 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "esignatures",
+  "version": "0.1.0",
+  "description": "Connect Hermes Agent to eSignatures.com through its hosted OAuth MCP server, with guarded contract workflow skills.",
+  "author": {
+    "name": "Using AI To Scale",
+    "url": "https://usingaitoscale.com"
+  },
+  "homepage": "https://github.com/jbellsolutions/hermes-esignatures",
+  "repository": "https://github.com/jbellsolutions/hermes-esignatures",
+  "license": "MIT",
+  "keywords": [
+    "esignatures",
+    "hermes-agent",
+    "mcp",
+    "slack",
+    "contracts"
+  ],
+  "extensions": {
+    "com.nousresearch.hermes": {
+      "servers": {
+        "esignatures": {
+          "trust": "untrusted"
+        }
+      }
+    }
+  }
+}
